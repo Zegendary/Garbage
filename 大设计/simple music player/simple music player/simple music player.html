@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="simple music player.css">
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1466528817_8676143.css">
+	<script src="http://o7m41tvmg.bkt.clouddn.com/jquery-1.12.4.min.js"></script>
+	<title>music player</title>
+</head>
+<body>
+	<div class="wrapper">
+		 <div class="background">
+		 	<div class="background1 show" data-index='0'></div>
+		 	<div class="background2 hide" data-index='1'></div>
+		 	<div class="background3 hide" data-index='2'></div>
+		 </div>
+		 <div class="content">
+			<audio>
+			 	<source title="Alan Walker-Fade-Fade.mp3" src="http://o7m41tvmg.bkt.clouddn.com/Alan%20Walker%20-%20Fade.mp3">
+			 	<source title="Sam Smith-I'm Not the Only One-In The Lonely Hour.mp3" src="http://o7m41tvmg.bkt.clouddn.com/Sam%20Smith%20-%20I%27m%20Not%20the%20Only%20One.mp3">
+			 	<source title="Mark Ronson,Bruno Mars-Uptown Funk-Uptown Funk.mp3" src="http://o7m41tvmg.bkt.clouddn.com/Mark%20Ronson,Bruno%20Mars%20-%20Uptown%20Funk.mp3">
+			</audio>
+			<div class="music-massage">
+				<p class="musicname">Fade</p>
+				<p class="musicer">Alan Walker</p>
+				<p class="record">Fade</p>
+			</div>
+			<div class="music-icon">
+				<a class="m-icon m-fenxiang colored" href="http://service.weibo.com/share/share.php?title=#_loginLayer_1466697157538" target="new"></a>
+				<span class="m-icon m-star colored"></span>
+				<span class="m-icon m-heart colored"></span>
+			</div>
+		</div>
+		<span class="basebar">
+			<span class="progressbar"></span>
+		</span>
+		<div class="controls">
+			<div class="play-control">
+				<span class="m-icon m-play btn1"></span>
+				<span class="m-icon m-prev btn2"></span>
+				<span class="m-icon m-next btn3"></span>
+			</div>
+			<div class="music-control">
+				<span class="m-icon m-xunhuan colored"></span>
+				<span class="m-icon m-radom colored"></span>
+			</div>			
+		</div>
+	</div>
+	<script>
+		//播放控制
+		var myAudio = $("audio")[0];
+		var $sourceList = $("source");
+		var currentSrcIndex = 0;
+		var currentSr = "";
+		$(".btn1").click(function(){
+			if (myAudio.paused) {
+				myAudio.play();
+				$(this).removeClass('m-play').addClass('m-pause');
+			} else {
+				myAudio.pause();
+				$(this).removeClass('m-pause').addClass('m-play');
+			}
+		});
+		$(".btn3").click(function(){
+			next()
+		});
+		$(".btn2").click(function(){
+			prev()
+		});
+		function next(){
+			++currentSrcIndex > $sourceList.length - 1 && (currentSrcIndex = 0);
+			change()
+			$('.btn1').removeClass('m-play').addClass('m-pause');
+		}
+		function prev(){
+			--currentSrcIndex < 0 && (currentSrcIndex = $sourceList.length - 1);
+			change()
+			$('.btn1').removeClass('m-play').addClass('m-pause');
+		}
+		function change(){
+			currentSrc = $("source").eq(currentSrcIndex).prop("src");
+			var title = $("source").eq(currentSrcIndex).prop("title").split(/\.|-/);
+			$('.musicname').text(title[1]);
+			$('.musicer').text(title[0]);
+			$('.record').text(title[2]);
+			myAudio.src = currentSrc;
+			myAudio.play();
+			$('.background').children().eq(currentSrcIndex).addClass('show').removeClass('hide').siblings().addClass('hide').removeClass('show')
+		}
+		//进度条控制
+		setInterval(present,500)
+		$(".basebar").mousedown(function(ev){
+			var posX = ev.clientX;
+			var targetLeft = $(this).offset().left;
+			var percentage = (posX - targetLeft)/180*100;
+			myAudio.currentTime = myAudio.duration * percentage/100;
+		});
+		function present(){
+			var length = myAudio.currentTime/myAudio.duration*100;
+			$('.progressbar').width(length+'%');
+			if(myAudio.currentTime == myAudio.duration){
+			next()
+		}			
+		}
+		//icon
+		$('.m-star').on('click',function(){
+			$(this).toggleClass('stared').toggleClass('colored')
+		})
+		$('.m-heart').on('click',function(){
+			$(this).toggleClass('loved').toggleClass('colored')
+		})
+	</script>
+</body>
+</html>
+

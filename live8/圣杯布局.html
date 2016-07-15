@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>圣杯布局</title>
+	<style>
+	*{
+		padding: 0;margin: 0;
+	}
+    .footer,.header{
+    	background: #ccc;
+    	text-align: center;
+    	border: 1px solid;
+    }
+    .middle,.left,.right{
+    	float: left;
+    	position: relative;
+    	min-height: 130px;
+    }
+    .father{
+    	overflow: hidden;
+    	padding: 0 210px 0 210px;
+    }
+    .middle{
+    	width: 100%;
+    	background: red;
+
+    }
+    .left{
+    	margin-left: -100%;
+    	background: green;
+    	right: 210px;
+    	width: 200px;
+    }
+    .right{
+        margin-left: -210px;
+        width: 200px;
+        left: 220px;
+        background: blue;
+
+    }
+	</style>
+</head>
+<body>
+	<div class="header">
+		<h4>header</h4>
+	</div>
+	<div class="father">
+	    <div class="middle">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</div>
+	    <div class="left">zuozuozuozuozuozuzozuo</div>
+		<div class="right">广告广告广告广告广告广告广告广告广告广告广告广告广告广告广告广告广告广告广告广告广告广告广告广告广告广告广告广告广告广告</div>
+	</div>
+	<div class="footer">
+		<h4>footer</h4>
+	</div>
+</body>
+</html>

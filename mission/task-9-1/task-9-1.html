@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task-9-1</title>
+	<style>
+	ul{list-style: none;}
+	a{text-decoration: none;color: #333;font-size: 30px}
+.sprite {background-image: url(spritesheet.png);background-repeat: no-repeat;display: inline-block;}
+.sprite-button1 {width: 26px;height: 26px;background-position: -5px -5px;}
+.sprite-button2 {width: 26px;height: 26px;background-position: -41px -5px;}
+.sprite-button3 {width: 26px;height: 26px;background-position: -5px -41px;}
+/*.sprite-button4 {width: 26px;height: 26px;background-position: -41px -41px;}
+.sprite-button5 {width: 26px;height: 26px;background-position: -77px -5px;}
+.sprite-button6 {width: 26px;height: 26px;background-position: -77px -41px;}*/
+
+	ul>li{
+		display: inline-block;
+		margin-left: 30px;
+	}
+	a:hover{color: #9D55B8;}
+    a:hover .sprite-button1{width: 26px;height: 26px;background-position: -41px -41px;}
+    a:hover .sprite-button2{width: 26px;height: 26px;background-position: -77px -5px;}
+    a:hover .sprite-button3{width: 26px;height: 26px;background-position: -77px -41px;}
+	</style>
+</head>
+<body>
+<ul>
+	<li><a href=""><span class="sprite sprite-button1"></span>前进</a></li>
+	<li><a href=""><span class="sprite sprite-button2"></span>开始</a></li>
+	<li><a href=""><span class="sprite sprite-button3"></span>停止</a></li>
+</ul>
+
+
+</body>
+</html>

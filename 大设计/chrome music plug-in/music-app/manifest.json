@@ -1,0 +1,18 @@
+{  
+  "name": "Mymusic",  
+  "manifest_version": 2,
+  "version": "1.0", 
+  "icons": { 
+  	"128": "icon_128.png",
+  	"19": "icon_19.png" 
+  },
+  "description": "A Random Music Player",  
+  "browser_action": {  
+    "default_icon": "icon_128.png" ,
+    "default_title": "My Music",
+    "default_popup": "Music.html"
+  }, 
+  "background": {
+    "page": "background.html"
+  }
+} 

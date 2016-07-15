@@ -1,0 +1,173 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	font: 1rem/150% Arial,'微软雅黑',"\5b8b\4f53";
+	-webkit-font-smoothing: antialiased;
+}
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.wrapper{
+	width: 64rem;
+	height: 91rem;
+	background-color: #f1eee8;
+}
+.wrapper:after{
+	content: "";
+	clear: both;
+	display: block;
+}
+.wrapper aside{
+	width: 24rem;
+	height: 91rem;
+	padding: 2rem 3rem;
+	float: left;
+	vertical-align: top;
+	background-color: rgb(4, 154, 146);
+	font-family: 微软雅黑;
+	position: relative;
+	color: #FFFFFF;
+}
+aside .headimg{
+	display: inline-block;
+	width: 12rem;
+	height: 12rem;
+	margin: 0rem 3rem;
+	border-radius: 6rem;
+	overflow: hidden;
+}
+aside .headimg img{
+	width: 12rem;
+}
+aside .information{
+	text-align: center;
+}
+.information .name{
+	font-size: 2.5rem;
+	height: 5rem;
+	line-height: 5rem;
+	font-family: SimHei;
+	font-weight: bolder;
+}
+.information .introduce{
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.information .introduce *{
+	font-size: 1.5rem;
+}
+aside .aboutme{
+	width: 100%;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.aboutme li{
+	margin: .5rem 0;
+}
+.aboutme .q{
+	display: inline-block;
+	width: 6.5rem;
+	text-align: right;
+}
+.skillbar li{
+	margin: .5rem 0;
+	display: inline-block;
+	line-height: 1.5rem;
+	height: 1.5rem;
+}
+.skillbar .skillname{
+	display: inline-block;
+	width: 5.5rem;
+	text-align: right;
+	margin-right: 1rem;
+}
+.skillbar .basebar{
+	display: inline-block;
+	width: 11rem;
+	height: 1rem;
+	line-height: 1rem;
+	border-radius: 0.5rem;
+	background-color: #117d77;
+	vertical-align: middle;
+	overflow: hidden;
+}
+.skillbar .progressbar{
+	height: 1rem;
+	display: inline-block;
+	background-color: #FFFFFF;
+}
+aside .connectme{
+	position: absolute;
+	bottom: 3rem;
+}
+.connectme a{
+	font-size: 1.2rem;
+	color: #FFFFFF;
+}
+.connectme .r-icon{
+	font-size: 1.5rem;
+	vertical-align: baseline;
+	margin-left: 1.5rem;
+	margin-right: 1rem;
+	color: #FFFFFF;
+}
+.wrapper article{
+	width: 40rem;
+	padding: 2rem;
+	margin-top: -1.5rem;
+	float: left;
+}
+article h3{
+	font-size: 2rem;
+	height: 2rem;
+	line-height: 2rem;
+	margin-top: 1.5rem;
+	margin-bottom: 1rem;
+	font-family: SimHei;
+	color: #FFFFFF;
+	font-weight: bolder;
+	background-color: rgb(4, 154, 146);
+}
+.skill h4{
+	font-weight: bolder;
+	color: #787878;
+}
+.skill ul li{
+	list-style: initial;
+	margin-left: 1rem;
+	color: #787878;
+}
+article .project .item a{
+	color: rgb(4, 154, 146);
+	text-decoration: underline;
+	font-size: 1.5rem;
+	margin-left: 1rem;
+}
+article .project .item div{
+	color: #787878;
+}
+article img{
+	width: 6rem;
+}
+article .demo ul li{
+	display: block;
+	float: left;
+	width: 18rem;
+}
+article .demo ul li a{
+	color: rgb(4, 154, 146);
+	text-decoration: underline;
+	font-size: 1.2rem;
+	margin-left: 1rem;
+}
+article .demo ul li div{
+	color: #787878;
+}
+article .expect div{
+	color: #787878;
+}

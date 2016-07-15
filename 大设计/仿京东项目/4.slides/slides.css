@@ -1,0 +1,51 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	font: 12px/150% Arial,Verdana,"\5b8b\4f53";
+	-webkit-font-smoothing: antialiased;
+}
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+i{font-style: normal;}
+.jd-arrow{display: inline-block;}
+
+
+/* 轮播样式Prevents slides from flashing */
+#slides {
+	width: 730px;
+	height: 454px;
+	position: relative;
+  /*display:none;*/
+}
+#slides .slidesjs-navigation{
+	position: absolute;
+}
+#slides .slidesjs-pagination{
+	position: absolute;
+	left: 0;
+	bottom: 10px;
+	z-index: 100;
+	text-align: center;
+	width: 100%;
+}
+#slides .slidesjs-pagination .slidesjs-pagination-item{
+	display: inline-block;
+	margin: 0 2px;
+    background: #3e3e3e;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+}
+.slidesjs-pagination .slidesjs-pagination-item a{
+	display: inline-block;
+	color: #fff;
+	width: 18px;
+}
+.slidesjs-pagination .slidesjs-pagination-item a.active{
+	background: #b61b1f;
+}

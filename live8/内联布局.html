@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>内联布局</title>
+	<style>
+	*{margin: 0;padding: 0;}
+    .clearfix:after{
+        content: ' ';
+        display: block;
+        clear: both;
+    }
+    ul{
+        display: inline-block;
+		/*border: 1px solid black;*/
+	}
+    li{
+    	list-style: none;
+    	float: left;
+    	border: 1px solid black;
+      	
+    }
+
+
+
+    .father{
+    	border: 1px solid #ddd;
+    	display: inline-block;
+    }
+    .btn{
+    	float: left;
+    	border: 1px solid #ccc;	
+    }
+    .yeye{
+    	text-align: center;
+    }
+	</style>
+</head>
+<body>
+	<h1 style="text-align: center;">第一种方法</h1>
+	<div style="text-align: center;"><ul class="clearfix">
+			<li><a href="">文字1</a></li>
+			<li><a href="">文字2</a></li>
+			<li><a href="">文字3</a></li>
+		</ul>
+	</div>
+	<br>	
+	<h1 style="text-align: center;">另一种方法</h1>
+	<div class="yeye">
+	<div class="father">
+		<a class="btn" href="#">按钮1</a>
+		<a class="btn" href="#">按钮2</a>
+		<a class="btn" href="#">按钮3</a>
+	</div>	
+	</div>
+</body>
+</html>

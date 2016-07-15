@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>css sprites</title>
+	<link rel="stylesheet" href="csssprites.css">
+	<style>
+	*{padding: 0;margin: 0;}
+	
+	ul{
+		left: 50%;
+		float:left;
+		position: relative;
+		list-style: none;
+	}
+	.clearfix:after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+    li{
+    	float: left;
+    	position: relative;
+    	right: 50%;
+    	
+    }
+    ul li a:hover{
+    	
+    	opacity:.4;
+
+    }
+	</style>
+</head>
+<body>
+	<ul class="clearfix">
+		<li><a class="sprite sprite-apple-nav_03" href="http://baidu1.com"></a></li>
+		<li><a class="sprite sprite-apple-nav_05" href="http://baidu2.com"></a></li>
+		<li><a class="sprite sprite-apple-nav_07" href="http://baidu3.com"></a></li>
+		<li><a class="sprite sprite-apple-nav_09" href="http://baidu4.com"></a></li>
+		<li><a class="sprite sprite-apple-nav_11" href="http://baidu5.com"></a></li>
+		<li><a class="sprite sprite-apple-nav_13" href="http://baidu6.com"></a></li>
+		<li><a class="sprite sprite-apple-nav_15" href="http://baidu7.com"></a></li>
+		<li><a class="sprite sprite-apple-nav_17" href="http://baidu8.com"></a></li>
+		<li><a class="sprite sprite-apple-nav_19" href="http://baidu9.com"></a></li>
+	</ul>
+	<div style="text-align: center;"><img src="iPad.png" alt="ipad"></div>
+</body>

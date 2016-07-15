@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双列布局</title>
+	<style>
+    .father{
+        margin: 0 auto;
+        width: 960px;
+        position: relative;
+    }
+    .aside{
+    	width: 150px;
+    	background-color: green;
+    	height: 400px;
+    	position: absolute;
+    }
+    .main{
+    	min-height: 450px;
+        background-color: red;
+        margin-left: 160px;
+    }
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="aside"></div>
+		<div class="main"></div>
+		<footer>footerfooterfooterfooterfooterfooterfooterfooterfooter</footer>
+	</div>

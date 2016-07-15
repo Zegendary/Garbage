@@ -1,0 +1,479 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url('//at.alicdn.com/t/font_1461121317_6831183.eot'); /* IE9*/
+    src: url('//at.alicdn.com/t/font_1461121317_6831183.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('http://at.alicdn.com/t/font_1461121317_6831183.woff') format('woff'), /* chrome、firefox */
+    url('http://at.alicdn.com/t/font_1461121317_6831183.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('//at.alicdn.com/t/font_1461121317_6831183.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+button span{font-family: iconfont}
+button:hover{opacity: 0.5}
+*{
+    margin: 0px;padding: 0px;list-style: none;text-decoration: none;
+}
+body{
+    background: url("images/X.png");
+    background-repeat: repeat;
+    background-color: #041428;
+    width: 100%;
+    min-width: 1366px;
+}
+.stonebackground{
+    background: url("images/stonebackground.png");
+}
+.wrapper{
+    width: 1040px;
+    margin: 0 auto;
+}
+/*header部分css样式*/
+.header{ width: 100%;margin-top: 38px;text-align: center}
+.headerleft,.headerright,.headerlogo{display: inline-block;}
+.headerleft,.headerright{width: 304px}
+.headerleft li{
+    display: inline-block;
+    float: right;
+    margin-left: 15%;
+}
+.headerright li{
+    display: inline-block;
+    float: left;
+    margin-right: 15%;
+}
+.headerleft>ul>li>a{
+    font-size: 15px;
+    font-family: 黑体;
+    font-weight:bold;
+}
+.headerleft a{color: #ffffff;}
+.headerright a{color: white}
+.header>.headerlogo{  width: 15%;margin: 0 6% }
+.headerright>ul>li>a{
+    font-size: 15px;
+    font-family: 黑体;
+    font-weight:bold;
+}
+.header a:hover{  color: #dddddd;}
+/*maintop部分CSS样式*/
+.maintop .title{
+    margin: 48px auto 48px auto;
+    text-align: center;
+    font-size: 57px;
+    color: #00a0e9;
+    font-family: SimSun-ExtB;
+}
+.maintop .maintopleft{
+    display: inline-block;
+    width: 424px;
+    vertical-align: top;
+}
+.maintop .maintopbanner {
+    margin-left: 38px;
+    background: rgb(58,114,176);    /*不支持rgba的浏览器*/
+    background: rgba(58,114,176,.2);  /*支持rgba的浏览器*/
+    filter:alpha(opacity=20);    /*IE8支持*/
+    display: inline-block;
+    text-align: center;
+}
+.maintop .bannertop{
+    position: relative;
+    top:-4px;
+    width: 100%;
+    height: 4px;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(#37b9a1), to(#2f9cd0));
+    background: -moz-linear-gradient(left, #37b9a1, #2f9cd0);
+    background: -ms-linear-gradient(#37b9a1 0,#2f9cd0 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#37b9a1',endColorstr='#2f9cd0',GradientType=1);
+}
+.maintop p{
+    margin-top: 18px;
+    font-size: 29px;
+    font-family: 微软雅黑;
+    color: #ffffff;
+    position: relative;
+}
+.maintop .cutline{
+    width: 100%;
+    margin: 0 auto;
+}
+.maintop .cutline div{
+    width: 290px;
+    border: 1px solid #0777a1;
+    display: inline-block;
+    position: relative;
+}
+.maintop .cutline:before{
+    content: '';
+    position: relative;
+    top:1px;
+    left: 1px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 2px solid #0777a1;
+    border-radius: 2px;
+}
+.maintop .cutline:after{
+    content: '';
+    position: relative;
+    top:1px;
+    left: -1px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 2px solid #0777a1;
+    border-radius: 2px;
+}
+.carousel{
+    margin: 15px;
+    position: relative;
+    width: 356px;
+    height: 200px;
+    overflow: hidden;
+}
+.carousel .img-ct{
+    position: relative;
+}
+.carousel .img-ct img{
+    width: 356px;
+    height: 200px;
+}
+.carousel .img-ct:after{
+    content: ' ';
+    display: block;
+    clear: both;
+}
+.carousel .img-ct li{
+    position: absolute;
+    display: none;
+}
+.arrow{
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #4E443C;
+    color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 0 2px #999;
+    opacity: 0.8
+}
+.arrow:hover {
+    opacity: 1;
+}
+.pre{
+    left: 10px;
+}
+.next{
+    right: 10px;
+}
+ul.bullet {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+ul.bullet li {
+    width: 16px;
+    height: 4px;
+    border-radius: 2px;
+    background: #fff;
+    display: inline-block;
+    cursor: pointer;
+}
+ul.bullet li.active {
+    background: #666;
+}
+.maintop .maintopright{
+    display: inline-block;
+    width: 560px;
+}
+.maintop .contactline{
+    width: 556px;
+    height: 515px;
+    background: url("images/line1366px.png");
+    display: inline-block;
+    position: relative;
+    top: 33px;
+    left: -17px;
+}
+.maintop .starttime{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 35px;
+    color: white;
+    margin-left: 120px;
+    font-family: SimSun-ExtB;
+}
+.maintop .toptext{
+    width: 405px;
+    text-align: right;
+    display: inline-block;
+    margin-left: 2%;
+}
+.toptext p{
+    font-size: 18px;
+    margin: 20px;
+    font-family: 微软雅黑;
+}
+.toptext button{
+    background-color: #f3c504;
+    font-size: 26px;
+    margin-bottom: 38px;
+    border-radius: 6px;
+    border: hidden;
+    padding: 4px 19px;
+    width: 238px;
+}
+.toptext button span{float: right}
+/*讲师简介css部分*/
+.mainmiddle{margin-top: 65px;}
+.mainmiddletitle{margin-bottom: 65px}
+.mainmiddle .titlechinese{
+    text-align: center;
+    font-family: 微软雅黑;
+    font-size: 34px;
+    color: #ffffff;
+}
+.mainmiddle .titleenglish{
+    text-align: center;
+    font-family: SimHei;
+    font-size: 15px;
+    color: rgb(0,195,252);
+}
+.mainmiddlephoto{
+    width: 285px;
+    display: inline-block;
+    text-align: right;
+    position: relative;
+    top: -32px;
+}
+.mainmiddlephoto .imghead{
+    position: relative;
+    top:-95px;
+    border: 2px solid #2f9dcf;
+}
+.mainmiddlephoto .imgcircle{
+    position: relative;
+    top: -80px;
+    left: -76px;
+}
+.mainmiddlephoto .imgufo{
+    position: relative;
+    top: 0px;
+    left: -10px;
+    z-index: 1;
+}
+.mainmiddle .middleleft{
+    width: 618px;
+    margin-left: 76px;
+    display: inline-block;
+    vertical-align: top;
+}
+.mainmiddlename{
+    width: 125px;
+    height: 48px;
+    display: inline-block;
+    position: relative;
+    clear: both;
+}
+.mainmiddlename .ruoyu{
+    width: 114px;
+    height: 41px;
+    margin:3px 6px;
+    border-top: 1px solid #58eef8;
+    border-bottom: 1px solid #58eef8;
+}
+.mainmiddlename .ruoyu1{
+    font-size: 29px;
+    font-family: 微软雅黑;
+    color: #00a0e9;
+    width: 114px;
+    height: 38px;
+    background: rgba(58,114,176,.2);  /*支持rgba的浏览器*/
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType = 0, startColorstr = #2000a0e9, endColorstr = #2000a0e9)\2; /*IE下的背景透明*/
+    display: inline-block;
+    text-align: center;
+    margin: 2px 0px;
+}
+.mainmiddlename div{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+}
+.mainmiddlename .first{
+    left:0;
+    top:0;
+    border-top: 2px solid #00a0e9;
+    border-left: 2px solid #00a0e9;
+}
+.mainmiddlename .second{
+    right:0;
+    top:0;
+    border-top: 2px solid #00a0e9;
+    border-right: 2px solid #00a0e9;
+}
+.mainmiddlename .third{
+    left:0;
+    bottom:0;
+    border-bottom: 2px solid #00a0e9;
+    border-left: 2px solid #00a0e9;
+}
+.mainmiddlename .forth{
+    right:0;
+    bottom:0;
+    border-right: 2px solid #00a0e9;
+    border-bottom: 2px solid #00a0e9;
+}
+.mainmiddleintroduce{
+    width: 557px;
+    height: 158px;
+    padding: 38px;
+    font-size: 23px;
+    line-height: 46px;
+    font-family: "微软雅黑 Light";
+    color: #ffffff;
+    margin-top: 28px;
+    background: rgba(58,114,176,.2);  /*支持rgba的浏览器*/
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType = 0, startColorstr = #2000a0e9, endColorstr = #2000a0e9)\2;     /*ie下透明*/
+}
+/*中间轮播部分*/
+.mainbuttom .mainbuttomname{
+    text-align: center;
+    font-size: 27px;
+    font-family: 微软雅黑;
+    color: #ffffff;
+}
+#teacherwrapper{
+    width: 1040px;
+    height: 305px;
+    overflow: hidden;
+}
+#teacherwrapper>#list{
+    width: 3120px;
+    height: 305px;
+    position: relative;
+}
+#teacherwrapper div[class*='teacher']{
+    width: 200px;
+    float: left;
+    margin-right: 8px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.mainbuttom img{border: none}
+#teacherwrapper div[class*='teacher'] span{
+    display: inline;
+    margin-top: 22px;
+    font-size: 19px;
+    font-family: 微软雅黑;
+    color: #00a0e9;
+}
+#teacherwrapper div[class*='teacher'] p{
+    margin-top: 17px;
+    font-size: 14px;
+    font-family: 微软雅黑;
+    color: #ffffff;
+    display: inline-block;
+    width: 157px;
+    padding: 0 2px;
+}
+img[class*='teacher']{position: relative}
+.mainbuttom .teacherleft{
+    left: -90px;
+    top: 137px;
+}
+.mainbuttom .teacherright{
+    left: 1088px;
+    top: -235px;
+}
+
+/*foot上面部分*/
+.mainfoot{margin-top: 90px;}
+.mainfoot .mainfootleft{
+    width: 373px;
+    height: 173px;
+    margin-left: 19px;
+    background: -webkit-gradient(linear, 0 0, 100% 100%, from(rgba(45,144,209,0.65)) , to(rgba(33,183,156,0.65)));
+    background: -moz-linear-gradient(left, rgba(45,144,209,0.65), rgba(33,183,156,0.65));
+    background: -ms-linear-gradient(rgba(45,144,209,0.65) 0,rgba(33,183,156,0.65) 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#37b9a1',endColorstr='#2f9cd0',GradientType=1);
+    display: inline-block;
+    vertical-align: top;
+}
+.mainfoot .mainfoottext{
+    display: inline-block;
+    margin:10% 0 10% 10% ;
+
+}
+.mainfootleft .footleftseat{
+    font-size: 48px;
+    color: #ffffff;
+}
+.mainfootleft .footleftmoney{
+    font-size: 38px;
+    color: #ffffff;
+}
+.mainfoot button{
+    background-color: #f3c504;
+    font-size: 26px;
+    margin-bottom: 27px;
+    margin-left: 14px;
+    border-radius: 6px;
+    border: hidden;
+    width: 124px;
+    height: 57px;
+}
+.mainfoot .mainfootright{
+    width: 475px;
+    display: inline-block;
+    margin-left: 85px;
+}
+.mainfootright li{
+    height: 48px;
+    font-size: 34px;
+    font-family: 黑体;
+    color: #ffffff;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+.mainfootright li img{
+    margin-right: 14px;
+    position: relative;
+    top: 10px;
+}
+.mainfoot .imgemo{
+    position: relative;
+    top: -90px;
+}
+
+
+/*!*footer部分*!*/
+.footwrapper{
+    width: 100%;
+    background-image: url("images/footbackground.png");
+    min-width: 1366px;
+    height: 785px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    top: 20px;
+
+}
+.foot {
+    text-align: center;
+    font-family: 黑体;
+    width: 1040px;
+    margin: 25px auto;
+
+}
+.foot a{
+    margin: 0px 5px;
+    color: #000000;
+}
+.foot a:hover{
+    color: #555555;
+}

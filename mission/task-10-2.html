@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task-10-2</title>
+	<style>
+	.border{
+		margin:30px 40px;
+		border: 2px solid #ccc;
+		width: 300px;
+		height: 150px;
+		z-index: 0;
+		position: relative;
+	}
+
+	.border1,.border2,.border3,.border4{
+		height: 0px;
+		width: 0px;
+		z-index: 999;
+	}
+    .border>.border1{
+    	border: 18px solid;
+    	border-color: transparent transparent #ccc transparent;
+    	position: relative;
+    	left: 25px;
+    	top: -38px;
+    }
+    .border>.border2{
+    	border: 18px solid;
+    	border-color: red red transparent transparent;
+		position: absolute;
+    	right: -2px;
+    	top: -2px;
+    }
+	.border3{
+		border: 18px solid;
+    	border-color: transparent transparent #ccc transparent;
+    	position: relative;
+    	left: 25px;
+    	top: -37px;
+	}
+	.border4{
+		border: 18px solid;
+    	border-color: transparent transparent white transparent;
+    	position: relative;
+    	left: 25px;
+    	top: -70px;
+	}
+	.border5{
+		width: 32px;
+		height: 32px;
+		border: 2px solid;
+    	border-color: #ccc transparent transparent #ccc;
+		position: relative;
+    	left: 25px;
+    	top: -18px;
+    	background: white;
+    	transform:rotate(45deg);
+		-ms-transform:rotate(45deg); 	/* IE 9 */
+		-moz-transform:rotate(45deg); 	/* Firefox */
+		-webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+		-o-transform:rotate(45deg); 	/* Opera */
+	}
+	</style>
+</head>
+<body>
+	<div class="border">
+			<div class="border1"></div>
+	</div>
+	<div class="border">
+			<div class="border2"></div>
+	</div>
+	<div class="border">
+		<div class="border3"></div>
+		<div class="border4"></div>
+	</div>
+	<div class="border">
+		<div class="border5"></div>
+	</div>
+</body>
+</html>

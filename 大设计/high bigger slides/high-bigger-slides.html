@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bigger-slides</title>
+    <link rel="stylesheet" href="high-bigger-slides.css">
+    <script src="http://o7m41tvmg.bkt.clouddn.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    <div class="main">
+        <h1>
+            Apple-like Gallery
+            <br>
+            <b>Slideshow</b>
+        </h1>
+        <h2>View the <a href="">original tutorial »</a></h2>
+        <div class="slides-wrapper">
+            <div class="slides-window">
+                <img src="img/macbook.jpg" alt=""><img src="img/iphone.jpg" alt=""><img src="img/imac.jpg" alt=""><img src="img/info.jpg" alt="">
+            </div>
+            <div class="slides-menu">
+                <ul>
+                    <li style="width: 2px"><a href=""></a></li>
+                    <li class="item active" data-index="0"><a href="javascript:;"><img src="img/thumb_macbook.png" alt=""></a></li>
+                    <li class="item inact" data-index="1"><a href="javascript:;"><img src="img/thumb_iphone.png" alt=""></a></li>
+                    <li class="item inact" data-index="2"><a href="javascript:;"><img src="img/thumb_imac.png" alt=""></a></li>
+                    <li class="item inact" data-index="3"><a href="javascript:;"><img src="img/thumb_about.png" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <p>This is a tutorialzine demo. View the <a href=""> original tutorial</a> to read and download the source files.</p>
+    <p>The gallery features artwork from <a href="">rambocre, pickupjojo</a> and <a href="">codenamebender</a></p>
+    <script>
+        $('.item').on('click',function(){
+            $(this).removeClass('inact').addClass('active').siblings().removeClass('active').addClass('inact')
+            var index = $(this).attr('data-index');
+            var right = index*920
+            $('.slides-window').stop().animate({right:right+'px'},500)
+        })
+    </script>
+</body>
+</html>

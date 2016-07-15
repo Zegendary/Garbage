@@ -1,0 +1,38 @@
+*{margin: 0;padding:0;}
+li{list-style: none;}
+a{text-decoration: none;color: black}
+.nav{
+	background: #ccc;
+	font-family: "Helvetica","SimHei",serif;
+}
+.nav>ul{
+	display: inline-block;
+	vertical-align: middle;
+}
+.nav>ul>li{
+	display: inline-block;
+	float: left;
+	position: relative;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	width: 100px;
+}
+
+.nav>ul>li>ul{
+	border:1px solid #ccc;
+	position: relative;
+	margin-top: -1px;
+	display: none;
+}
+a{
+	line-height: 25px;
+	width: 100%;
+	display: block;
+}
+a:hover{background: #bababa;}
+.nav>ul>li:hover>ul{
+	display: block;
+}
+
+
