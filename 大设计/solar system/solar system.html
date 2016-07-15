@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>solar system</title>
+	<style>
+		*{margin:0;padding:0}
+		body{
+		  background:black;
+		}
+		.galaxy{
+		  width:1300px;
+		  height:1300px;
+		  position: relative;
+		}
+		.galaxy>div{
+		  position: absolute;
+		}
+		.galaxy>div>div{
+		  position: relative;
+		}
+		div[class*=track]{
+		  border: 1px solid #555;
+		}
+		.sun{
+		  background: url(http://images2015.cnblogs.com/blog/818663/201510/818663-20151013205656257-1729257972.png) 0 0 no-repeat;
+		  width: 100px;
+		  height: 100px;
+		  left: 600px;
+		  top: 600px;
+		}
+		.mercury-track{
+		  width: 150px;
+		  height:150px;
+		  border-radius: 75px;
+		  left: 575px;
+		  top: 575px;
+		  animation: rotation 8.8s linear infinite;
+		}
+		.mercury{
+		  background: url(http://images2015.cnblogs.com/blog/818663/201510/818663-20151013205828679-1300811025.png) 0 0 no-repeat;
+		  width: 50px;
+		  height: 50px;
+		  left: -25px;
+		  top: 50px;
+		  animation: rotation 5.9s linear infinite;
+		}
+		.venus-track{
+		  width: 260px;
+		  height: 260px;
+		  left: 520px;
+		  top: 520px;
+		  border-radius: 130px;
+		  animation: rotation 22.5s linear infinite;
+		}
+		.venus{
+		  background: url(http://images2015.cnblogs.com/blog/818663/201510/818663-20151013205908382-878096313.png) 0 0 no-repeat;
+		  width: 60px;
+		  height: 60px;
+		  left: -30px;
+		  top: 100px;
+		  animation: rotation 24.3s linear infinite;
+		}
+		.earth-track{
+		  width: 370px;
+		  height: 370px;
+		  border-radius: 185px;
+		  left: 465px;
+		  top: 465px;
+		  animation: rotation 36.5s linear infinite;
+		}
+		.earth{
+		  background: url(http://images2015.cnblogs.com/blog/818663/201510/818663-20151013205943538-1279197333.png) 0 0 no-repeat;
+		  width: 60px;
+		  height: 60px;
+		  top: 155px;
+		  left: -30px;
+		  animation: rotation 2s linear infinite;
+		}
+		.mars-track{
+		  width: 480px;
+		  height: 480px;
+		  border-radius: 240px;
+		  left: 410px;
+		  top: 410px;
+		  animation: rotation 68.7s linear infinite;
+		}
+		.mars{
+		  background: url(http://images2015.cnblogs.com/blog/818663/201510/818663-20151013210013101-347441696.png) 0 0 no-repeat;
+		  width: 50px;
+		  height: 50px;
+		  top: 215px;
+		  left: -25px;
+		  animation: rotation 2s linear infinite;
+		}
+		.jupiter{
+		    background: url(http://images2015.cnblogs.com/blog/818663/201510/818663-20151013210021944-1129782361.png) 0 0 no-repeat;
+		    width: 80px;
+		    height: 80px;
+		    top: 270px;
+		    left: -40px;
+		    animation: rotation 0.8s linear infinite;
+		}
+
+		.jupiter-track{
+		    border-radius: 310px;
+		    width: 620px;
+		    height: 620px;
+		    left: 340px;
+		    top: 340px;
+		  animation: rotation 430.7s linear infinite;
+		}
+		.saturn{
+		    background: url(http://images2015.cnblogs.com/blog/818663/201510/818663-20151013210041710-1584827250.png) 0 0 no-repeat;
+		    width: 120px;
+		    height: 80px;
+		    top: 370px;
+		    left: -60px;
+		    animation: rotation 0.8s linear infinite;
+		}
+
+		.saturn-track{
+		    border-radius: 410px;
+		    width: 820px;
+		    height: 820px;
+		    left: 240px;
+		    top: 240px;
+		    animation: rotation 1058.5s linear infinite;
+		}
+		.uranus{
+		    background: url(http://images2015.cnblogs.com/blog/818663/201510/818663-20151013210048304-974518986.png) 0 0 no-repeat;
+		    width: 80px;
+		    height: 80px;
+		    top: 470px;
+		    left: -40px;
+		    animation: rotation 1.4s linear infinite;
+		}
+
+		.uranus-track{
+		    border-radius: 510px;
+		    width: 1020px;
+		    height: 1020px;
+		    top: 140px;
+		    left: 140px;
+		    animation: rotation 3066s linear infinite;
+		}
+		.pluto{
+		    background: url(http://images2015.cnblogs.com/blog/818663/201510/818663-20151013210116038-1431613611.png) 0 0 no-repeat;
+		    width: 70px;
+		    height: 70px;
+		    top: 560px;
+		    left: -35px;
+		    animation: rotation 1.3s linear infinite;
+		}
+
+		.pluto-track{
+		    border-radius: 595px;
+		    width: 1190px;
+		    height: 1190px;
+		    left: 55px;
+		    top: 55px;
+		    animation: rotation 5986s linear infinite;
+		}
+		@keyframes rotation{
+		  to{
+		    transform: rotate(360deg);
+		  }
+		}
+
+	</style>
+</head>
+<body>
+	<div class="galaxy">
+		<div class='sun'></div>
+		<div class='mercury-track'>
+			<div class='mercury'></div>
+		</div>
+		<div class='venus-track'>
+			<div class='venus'></div>	
+		</div>
+		<div class='earth-track'>
+			<div class='earth'></div>
+		</div>
+		<div class='mars-track'>
+			<div class='mars'></div>
+		</div>
+		<div class='jupiter-track'>
+			<div class='jupiter'></div>
+		</div>
+		<div class='saturn-track'>
+			<div class='saturn'></div>
+		</div>
+		<div class='uranus-track'>
+			<div class='uranus'></div>
+		</div>
+		<div class='pluto-track'>
+			<div class='pluto'></div>
+		</div> 
+	</div>
+</body>
+</html>

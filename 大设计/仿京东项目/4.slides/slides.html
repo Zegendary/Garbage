@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>menu</title>
+	<link rel="stylesheet" href="slides.css">
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1463928420_289974.css">
+	<script src="http://o7m41tvmg.bkt.clouddn.com/jquery-1.12.4.min.js"></script>
+    <script src="http://o7m41tvmg.bkt.clouddn.com/jquery.slides.min.js"></script>
+</head>
+<body>
+	<div id="slides">
+	    <a href=""><img src="https://img10.360buyimg.com/da/jfs/t2608/305/1421577311/83416/668d6218/573d697fN4691731c.jpg"></a>
+	    <a href=""><img src="https://img10.360buyimg.com/da/jfs/t2770/176/1355003698/165130/c6fd8ea1/573d4c3dN92fc6c82.jpg"></a>
+	    <a href=""><img src="https://img13.360buyimg.com/da/jfs/t1927/64/1413648216/158937/2fff826c/56555cd9N70ac7a6b.jpg"></a>
+	    <a href=""><img src="https://img20.360buyimg.com/da/jfs/t2764/310/1446826762/56503/5b5a6f40/573ed610Nad29b69f.jpg"></a>
+	    <a href=""><img src="https://img20.360buyimg.com/da/jfs/t2773/171/1446800991/206775/d48f15ab/573e9713Nbb7fd188.jpg"></a>
+	    <a href=""><img src="https://img30.360buyimg.com/da/jfs/t2806/85/1465262664/204421/7671d25/573f1959N8636051e.jpg"></a>
+  </div>
+
+<script>
+    $(function(){
+      $("#slides").slidesjs({
+        width: 730,
+        height: 454,
+        navigation: false,
+    	play: {
+	      active: true,
+	        // [boolean] Generate the play and stop buttons.
+	        // You cannot use your own buttons. Sorry.
+	      effect: "slide",
+	        // [string] Can be either "slide" or "fade".
+	      interval: 2000,
+	        // [number] Time spent on each slide in milliseconds.
+	      auto: true,
+	        // [boolean] Start playing the slideshow on load.
+	      swap: false,
+	        // [boolean] show/hide stop and play buttons
+	      pauseOnHover: true,
+	        // [boolean] pause a playing slideshow on hover
+	      restartDelay: 2500
+	        // [number] restart delay on inactive slideshow
+	    }
+      });
+    });
+  </script>
+</body>
+</html>

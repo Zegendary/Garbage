@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task-10-1</title>
+	<style>
+	*{margin: 0;padding: 0;font-family: "SimHei"}
+	ul{list-style: none;}
+	a{text-decoration: none;}
+	.logo-nav,.footer{
+		background: rgb(51,51,51);
+		height: 50px;
+		width: 100%;
+	}
+	.wrapper,.main,.nav2{
+		width: 975px;
+		margin: 0 auto;
+	}
+	.nav,.logo{display: inline-block;}
+	.nav{
+		float: right;
+	}
+	.nav>ul>li{
+		display: inline-block;	
+		padding-left: 20px;
+	}
+	.nav2>ul>li{
+		display: inline-block;	
+		padding-right: 20px;
+	}
+	.nav>ul>li>a,.nav2>ul>li>a{
+		line-height: 50px;
+		font-size: 18px;
+		color: white;
+	}
+	.main{margin-top: 10px;}
+	.aside{
+		background: #eee;
+		height: 540px;
+		width: 220px;
+		display: inline-block;
+	}
+	.text{
+		background: #eee;
+		display: inline-block;
+		float: right;
+		height: 270px;
+		width: 750px;
+		color: rgb(102,102,102);
+	}
+	.text>h1{
+		margin: 30px 10px; 
+	}
+	.text>p{
+		margin: 5px 10px;
+	}
+	</style>
+</head>
+<body>
+	<div class="logo-nav">
+		<div class="wrapper">
+			<div class="logo"><img src="jirengu.png" alt="饥人谷"></div>
+			<div class="nav">
+			<ul>
+				<li><a href="">技能</a></li>
+				<li><a href="">经历</a></li>
+				<li><a href="">作品</a></li>
+				<li><a href="">关于</a></li>
+			</ul>
+			</div>
+		</div>
+	</div>
+	<div class="main">
+		<div class="aside"></div>
+		<div class="text">
+			<h1>我的作品</h1>
+			<p>生活很美好</p>
+			<p>心情不错</p>
+			<p>代码写得很漂亮</p>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="nav2">
+			<ul>
+				<li><a href="">饥人谷</a></li>
+				<li><a href="">JSCODE</a></li>
+				<li><a href="">JSBIN</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

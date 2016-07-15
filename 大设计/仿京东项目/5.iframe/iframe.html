@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>iframe</title>
+	<link rel="stylesheet" href="iframe.css">
+	<script src="http://o7m41tvmg.bkt.clouddn.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+	<div class="newswrapper">
+		<div class="news">
+			<div class="newstitle">
+				<span>京东时报</span>
+				<a href="">更多<i class="jd-icon z-arrow-right-1"></i></a>
+			</div>
+			<div class="newsdetail">
+				<ul>
+					<li><a href=""><span>[618]</span>618霸气登场 超值好货提前定</a></li>
+					<li><a href=""><span>[公告]</span>刘强东首部口述新书上市</a></li>
+					<li><a href=""><span>[特惠]</span>1元夺联想Miix 4！</a></li>
+					<li><a href=""><span>[公告]</span>华东浦东大件运营中心正式运营</a></li>
+					<li><a href=""><span>[特惠]</span>京东粽子专场 满199减100</a></li>
+				</ul>
+			</div>
+			<div class="newsicon">
+				<ul class="newsiconlist">
+					<li class="newsimg1 hasframe" data-index=0><a href=""><div></div><span>话费</span></a></li>
+					<li class="newsimg2 hasframe" data-index=1><a href=""><div></div><span>机票</span></a></li>
+					<li class="newsimg3 hasframe" data-index=2><a href=""><div></div><span>电影票</span></a></li>
+					<li class="newsimg4 hasframe" data-index=3><a href=""><div></div><span>游戏</span></a></li>
+					<li class="newsimg5"><a href=""><div></div><span>彩票</span></a></li>
+					<li class="newsimg6"><a href=""><div></div><span>团购</span></a></li>
+					<li class="newsimg7"><a href=""><div></div><span>酒店</span></a></li>
+					<li class="newsimg8"><a href=""><div></div><span>火车票</span></a></li>
+					<li class="newsimg9"><a href=""><div></div><span>众筹</span></a></li>
+					<li class="newsimg10"><a href=""><div></div><span>理财</span></a></li>
+					<li class="newsimg11"><a href=""><div></div><span>礼品卡</span></a></li>
+					<li class="newsimg12"><a href=""><div></div><span>白条</span></a></li>
+
+				</ul>
+				<ul class="iframe-recharge clearfix">
+					<li>
+						<a href="" class="iframe-button"><span>话费</span></a>
+						<div class="iframe-content">
+							<iframe width="250" height="185" frameborder="0" scrolling="no" src="http://chongzhi.jd.com/jd-index-ifame.htm"></iframe>
+						</div>
+					</li>
+					<li>
+						<a href="" class="iframe-button"><span>机票</span></a>
+						<div class="iframe-content">
+							<iframe width="250" height="185" frameborder="0" scrolling="no" src="http://jipiao.jd.com/htm/iframeTrip.html"></iframe>
+						</div>						
+					</li>
+					<li>
+						<a href="" class="iframe-button"><span>电影票</span></a>
+						<div class="iframe-content">
+							<iframe width="250" height="185" frameborder="0" scrolling="no" src="http://movie.jd.com/jdmovie.html"></iframe>
+						</div>							
+					</li>
+					<li>
+						<a href="" class="iframe-button"><span>游戏</span></a>
+						<div class="iframe-content">
+							<iframe width="250" height="185" frameborder="0" scrolling="no" src="http://card.jd.com/html/card-jdIndex2015.html"></iframe>
+						</div>							
+					</li>
+					<div class="closeframe" style="z-index:10">x</div>
+				</ul>
+			</div>
+		</div>
+		<img src="https://img30.360buyimg.com/da/jfs/t2875/293/1595911033/24485/db076c15/5743df35Nf04d4ec0.jpg" alt="">
+	</div>
+	<script>
+		$('.hasframe').on('mouseenter',function(e){
+			popout(e);
+		})  
+		$('.closeframe').on('click',function(e){
+			$('.hasframe').off('mouseenter');
+			$('.iframe-recharge').stop(true,true).animate({top: '209px'},500,function(){
+			 	setTimeout(function(){
+					$('.hasframe').on('mouseenter',function(e){
+						popout(e)
+					})  
+				},0);
+			})
+		})
+		$('.iframe-button').on('mouseenter',function(e){
+			$('.iframe-content.active,.iframe-button.active').removeClass('active')
+			$(this).addClass('active')			
+		    $(this).next('.iframe-content').addClass('active')
+		    console.log(this)
+		})
+		function popout(e){
+			var $current = $(e.currentTarget)
+			var index = $current.attr('data-index')
+			var indexNumber = +index  
+			$('.iframe-content.active,.iframe-button.active').removeClass('active')
+			$('.iframe-button').eq(indexNumber).addClass('active')
+			$('.iframe-content').eq(indexNumber).addClass('active')
+			$('.iframe-recharge').animate({top: '0px'},500,function(){})
+		}
+	</script>
+</body>
+</html>
+
+
+

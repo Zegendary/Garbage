@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="jay.css">
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1466528817_8676143.css">
+	<link rel="icon" href="jayicon.jpg" mce_href="//www.jd.com/favicon.ico" type="image/x-icon">
+	<script src="http://o7m41tvmg.bkt.clouddn.com/jquery-1.12.4.min.js"></script>
+	<title>周杰伦的床边故事</title>
+</head>
+<body>
+	<div id='wx_logo' style='margin:0 auto;display:none;'>
+		<img src="jay.jpg"/>
+	</div>
+	<div class="wrapper">
+		 <div class="background"></div>
+		 <div class="content">
+			<audio>
+			 	<source title="周杰伦-前世情人-周杰伦的床边故事.mp3" src="http://o99p683vf.bkt.clouddn.com/%E5%91%A8%E6%9D%B0%E4%BC%A6%20-%20%E5%89%8D%E4%B8%96%E6%83%85%E4%BA%BA.mp3">
+			 	<source title="周杰伦-土耳其的冰淇淋-周杰伦的床边故事.mp3" src="http://o99p683vf.bkt.clouddn.com/07%20%E5%9C%9F%E8%80%B3%E5%85%B6%E5%86%B0%E6%B7%87%E6%B7%8B.mp3">
+			 	<source title="周杰伦-床边故事-周杰伦的床边故事.mp3" src="http://o99p683vf.bkt.clouddn.com/%E5%91%A8%E6%9D%B0%E4%BC%A6%20-%20%E5%BA%8A%E8%BE%B9%E6%95%85%E4%BA%8B.mp3">
+			 	<source title="周杰伦-爱情废柴-周杰伦的床边故事.mp3" src="http://o99p683vf.bkt.clouddn.com/10%20%E6%84%9B%E6%83%85%E5%BB%A2%E6%9F%B4.mp3">
+			 	<source title="周杰伦-说走就走-周杰伦的床边故事.mp3" src="http://o99p683vf.bkt.clouddn.com/02%20%E8%AA%AA%E8%B5%B0%E5%B0%B1%E8%B5%B0.mp3">
+			 	<source title="周杰伦-不该-周杰伦的床边故事.mp3" src="http://o99p683vf.bkt.clouddn.com/%E5%91%A8%E6%9D%B0%E4%BC%A6%20-%20%E4%B8%8D%E8%AF%A5%281%29.mp3">
+			 	<source title="周杰伦-告白气球-周杰伦的床边故事.mp3" src="http://o99p683vf.bkt.clouddn.com/08%20%E5%91%8A%E7%99%BD%E6%B0%A3%E7%90%83.mp3">
+			 	<source title="周杰伦-一点点-周杰伦的床边故事.mp3" src="http://o99p683vf.bkt.clouddn.com/03%20%E4%B8%80%E9%BB%9E%E9%BB%9E.mp3">
+			 	<source title="周杰伦-Now You See Me-周杰伦的床边故事.mp3" src="http://o99p683vf.bkt.clouddn.com/09%20Now%20You%20See%20Me.mp3">
+			</audio>
+			<div class="music-massage">
+				<p class="musicname">前世情人</p>
+				<p class="musicer">周杰伦</p>
+				<p class="record">周杰伦的床边故事</p>
+			</div>
+			<div class="music-icon">
+				<a class="m-icon m-fenxiang colored" href="http://service.weibo.com/share/share.php?title=#_loginLayer_1466697157538" target="new"></a>
+				<span class="m-icon m-star colored"></span>
+				<span class="m-icon m-heart colored"></span>
+			</div>
+		</div>
+		<span class="basebar">
+			<span class="progressbar"></span>
+		</span>
+		<div class="controls">
+			<div class="play-control">
+				<span class="m-icon m-play btn1"></span>
+				<span class="m-icon m-prev btn2"></span>
+				<span class="m-icon m-next btn3"></span>
+			</div>
+			<div class="music-control">
+				<span class="m-icon m-xunhuan colored"></span>
+				<span class="m-icon m-radom colored"></span>
+			</div>			
+		</div>
+	</div>
+	<script>
+		//播放控制
+		var myAudio = $("audio")[0];
+		var $sourceList = $("source");
+		var currentSrcIndex = 0;
+		var currentSr = "";
+		$(".btn1").click(function(){
+			if (myAudio.paused) {
+				myAudio.play();
+				$(this).removeClass('m-play').addClass('m-pause');
+			} else {
+				myAudio.pause();
+				$(this).removeClass('m-pause').addClass('m-play');
+			}
+		});
+		$(".btn3").click(function(){
+			next()
+		});
+		$(".btn2").click(function(){
+			prev()
+		});
+		function next(){
+			++currentSrcIndex > $sourceList.length - 1 && (currentSrcIndex = 0);
+			change()
+			$('.btn1').removeClass('m-play').addClass('m-pause');
+		}
+		function prev(){
+			--currentSrcIndex < 0 && (currentSrcIndex = $sourceList.length - 1);
+			change()
+			$('.btn1').removeClass('m-play').addClass('m-pause');
+		}
+		function change(){
+			currentSrc = $("source").eq(currentSrcIndex).prop("src");
+			var title = $("source").eq(currentSrcIndex).prop("title").split(/\.|-/);
+			$('.musicname').text(title[1]);
+			$('.musicer').text(title[0]);
+			$('.record').text(title[2]);
+			myAudio.src = currentSrc;
+			myAudio.play();
+		}
+		//进度条控制
+		setInterval(present,500)
+		$(".basebar").mousedown(function(ev){
+			var posX = ev.clientX;
+			var targetLeft = $(this).offset().left;
+			var percentage = (posX - targetLeft)/400*100;
+			myAudio.currentTime = myAudio.duration * percentage/100;
+		});
+		function present(){
+			var length = myAudio.currentTime/myAudio.duration*100;
+			$('.progressbar').width(length+'%');
+			if(myAudio.currentTime == myAudio.duration){
+			next()
+		}			
+		}
+		//icon
+		$('.m-star').on('click',function(){
+			$(this).toggleClass('stared').toggleClass('colored')
+		})
+		$('.m-heart').on('click',function(){
+			$(this).toggleClass('loved').toggleClass('colored')
+		})
+	</script>
+</body>
+</html>
+

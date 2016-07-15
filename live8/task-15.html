@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task-15</title>
+</head>
+<body>
+	<script>
+		var i = 0;
+		while (i <= 100){
+			console.log(i);
+			document.write(i+" ")
+			i++;
+		}
+	</script>
+	<script>
+		var letter;
+		document.onkeydown = letter;
+		　　     function letter() {   
+　　 　　      var keycode = event.keyCode;   
+　　 　　      var letter = String.fromCharCode(event.keyCode+32);
+
+		if(letter === "a"){
+			console.log("apple");
+			document.write("apple");
+		}else if (letter === "b") {
+			console.log("baidu");
+			document.write("baidu");
+		}else if (letter === "c") {
+			console.log("cisco");
+			document.write("cisco");
+		}else if (letter === "d") {
+			console.log("dog");
+			document.write("dog");
+		}else if (letter === "e") {
+			console.log("evil");
+			document.write("evil");
+		}else document.write("error")
+
+			return }
+	</script>
+	<script>
+		var letter;
+		document.onkeydown = letter;
+		　　     function letter() {   
+　　 　　      var keycode = event.keyCode;   
+　　 　　      var letter = String.fromCharCode(event.keyCode+32);
+			switch(letter){
+				case "a":
+				console.log("apple");document.write("apple");
+				break;
+				case "b":
+				console.log("baidu");document.write("baidu");
+				break;
+				case "c":
+				console.log("cisco");document.write("cisco");
+				break;
+				case "d":
+				console.log("dog");document.write("dog");
+				break;
+				case "e":
+				console.log("evil");document.write("evil");
+				break;
+				defaule:
+				error
+			}
+			return
+	}
+	</script>
+</body>
+</html>

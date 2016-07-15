@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1″>
+    <title>招生页</title>
+    <link rel="stylesheet" href="饥人谷报名页.css">
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function(){
+            var container = document.getElementById('teacherwrapper');
+            var list = document.getElementById('list');
+            var prev = document.getElementById('prev');
+            var next = document.getElementById('next');
+            var animated = false;
+            var timer;
+            function animate(offset){
+                animated = true;
+                var newleft = parseInt(list.style.left) + offset
+                var time = 200; //位移总时间
+                var interval = 5;//位移间隔时间
+                var speed = offset/(time/interval);//每次位移量
+                function go (){
+                    if( (speed < 0 && parseInt(list.style.left) > newleft) || (speed > 0 && parseInt(list.style.left) < newleft)){
+                        list.style.left = parseInt(list.style.left) + speed + 'px';
+                        setTimeout(go,interval);
+                    }
+                    else {
+                        animated = false;
+                        list.style.left = newleft + 'px';
+                        if(newleft < -2079){
+                            list.style.left =  -1040 + 'px';
+                        }
+                        if(newleft > -1){
+                            list.style.left =  -1040 + 'px';
+                        }
+                    }
+                }
+                go();
+            }
+            function play(){
+                timer = setInterval(next.onclick,3000);
+            }
+            function  stop(){
+                clearInterval(timer)
+            }
+            next.onclick = function () {
+                if (!animated){
+                    animate(-208);
+                }
+            };
+            prev.onclick = function () {
+                if (!animated){
+                    animate(208)
+                }
+            };
+            container.onmousemove = stop;
+            container.onmouseout = play;
+            play();
+        }
+    </script>
+</head>
+<body>
+    <div class="stonebackground">
+        <div class="wrapper">
+            <div class="header">
+                <div class="headerleft">
+                    <ul>
+                        <li><a href="http://www.jirengu.com/app/album/index">课程</a></li>
+                        <li><a href="http://www.jirengu.com/app/teacher/index">讲师</a></li>
+                        <li><a href="http://book.jirengu.com/">课件</a></li>
+                    </ul>
+                </div>
+                <div class="headerlogo">
+                    <img src="images/hungervalley3.png" alt="logo" width="100%">
+                </div>
+                <div class="headerright">
+                    <ul>
+                        <li><a href="http://jscode.me/">BBS</a></li>
+                        <li><a href="http://www.jianshu.com/collection/38dd7fc9033a">学员博客</a></li>
+                        <li><a href="">报名预约</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="maintop">
+                <div class="title">饥人谷前端直播九班</div>
+                <div class="maintopleft">
+                    <div class="maintopbanner">
+                        <div class="bannertop"></div>
+                        <p>公开课视频</p>
+                        <div class="cutline"><div></div></div>
+                        <div class="carousel">
+                            <ul class="img-ct">
+                                <li data-id=0><a href="#"><img src="images/轮播1.png"></a></li>
+                                <li data-id=1><a href="#"><img src="images/轮播2.png"></a></li>
+                                <li data-id=2><a href="#"><img src="images/轮播3.png"></a></li>
+                                <li data-id=3><a href="#"><img src="images/轮播4.png"></a></li>
+                            </ul>
+                            <a class="pre arrow" href="#"><</a>
+                            <a class="next arrow" href="#">></a>
+                            <ul class="bullet">
+                                <li class="active"></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toptext">
+                        <p style="color: #bbbbbb;">更多往期公开课视频：<a href="http://jirengu.com" style="color: #bbb">www.jirengu.com</a></p>
+                        <a href="http://book.jirengu.com/" target="_blank"><button>查看大纲|课件<span>&#xe603;</span></button></a>
+                        <br>
+                        <a href="http://www.jirengu.com/index.php?app=classroom&mod=About&act=charge" target="_blank"><button>报名收费<span>&#xe603;</span></button></a>
+                        <br>
+                    </div>
+                </div>
+                <div class="maintopright">
+                    <div class="starttime">开班时间：五月下旬</div>
+                    <div class="contactline"></div>
+                </div>
+            </div>
+            <div class="mainmiddle">
+                <div class="mainmiddletitle">
+                    <p class="titlechinese">讲师简介</p>
+                    <p class="titleenglish">TEACHER INTRODUCTION</p>
+                </div>
+                <div class="mainmiddlephoto">
+                    <img class="imgufo" src="images/ufp.png" alt="飞盘">
+                    <br>
+                    <img class="imgcircle" src="images/circle_03.png" alt="">
+                    <br>
+                    <img class="imghead" src="images/head.png" alt="头像">
+                </div>
+                <div class="middleleft">
+                    <div class="mainmiddlename">
+                        <div class="ruoyu"><a href=""><div class="ruoyu1">若愚</div></a></div>
+                        <div class="first"></div>
+                        <div class="second"></div>
+                        <div class="third"></div>
+                        <div class="forth"></div>
+                    </div>
+                    <div class="mainmiddleintroduce">
+                        若愚，北航计算机硕士，曾任职于百度LBS搜索研发部、阿里巴巴B2B技术部，开发过百度地图、阿里巴巴中文站等产品，擅长CSS3、HTML5、nodejs，现任饥人谷教学研发总监。
+                    </div>
+                </div>
+            </div>
+            <div class="mainbuttom">
+                <div class="mainbuttomname">后援团介绍</div>
+                <a href="javascript:;" id="prev"><img class="teacherleft" src="images/三角_03.png" alt=""></a>
+                <div id="teacherwrapper">
+                    <div id="list" style="left: -1040px">
+                        <div class="teacher1">
+                            <a href=""><img src="images/teacher1_03.png" alt="" width="200px"></a>
+                            <span>苏怡</span>
+                            <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                        </div>
+                        <div class="teacher2">
+                            <a href=""><img src="images/teacher2_05.png" alt="" width="200px"></a>
+                            <span>苏怡</span>
+                            <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                        </div>
+                        <div class="teacher3">
+                            <a href=""><img src="images/teacher3_07.png" alt="" width="200px"></a>
+                            <span>苏怡</span>
+                            <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                        </div>
+                        <div class="teacher4">
+                            <a href=""><img src="images/teacher2_05.png" alt="" width="200px"></a>
+                            <span>苏怡</span>
+                            <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                        </div>
+                        <div class="teacher5">
+                            <a href=""><img src="images/teacher1_03.png" alt="" width="200px"></a>
+                            <span>苏怡</span>
+                            <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                        </div>
+                        <div class="teacher1">
+                            <a href=""><img src="images/teacher1_03.png" alt="" width="200px"></a>
+                            <span>苏怡</span>
+                            <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                        </div>
+                        <div class="teacher2">
+                            <a href=""><img src="images/teacher2_05.png" alt="" width="200px"></a>
+                            <span>苏怡</span>
+                            <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                        </div>
+                        <div class="teacher3">
+                            <a href=""><img src="images/teacher3_07.png" alt="" width="200px"></a>
+                            <span>苏怡</span>
+                            <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                        </div>
+                        <div class="teacher4">
+                            <a href=""><img src="images/teacher2_05.png" alt="" width="200px"></a>
+                            <span>苏怡</span>
+                            <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                        </div>
+                        <div class="teacher5">
+                            <a href=""><img src="images/teacher1_03.png" alt="" width="200px"></a>
+                            <span>苏怡</span>
+                            <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                        </div>
+                        <div class="teacher1">
+                            <a href=""><img src="images/teacher1_03.png" alt="" width="200px"></a>
+                            <span>苏怡</span>
+                            <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                        </div>
+                        <div class="teacher2">
+                            <a href=""><img src="images/teacher2_05.png" alt="" width="200px"></a>
+                            <span>苏怡</span>
+                            <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                        </div>
+                        <div class="teacher3">
+                            <a href=""><img src="images/teacher3_07.png" alt="" width="200px"></a>
+                            <span>苏怡</span>
+                            <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                        </div>
+                        <div class="teacher4">
+                            <a href=""><img src="images/teacher2_05.png" alt="" width="200px"></a>
+                            <span>苏怡</span>
+                            <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                        </div>
+                        <div class="teacher5">
+                            <a href=""><img src="images/teacher1_03.png" alt="" width="200px"></a>
+                            <span>苏怡</span>
+                            <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="javascript:;" id="next"><img class="teacherright" src="images/三角_06.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="footwrapper">
+        <div class="wrapper">
+            <div class="mainfoot">
+                <div class="mainfootleft">
+                    <div class="mainfoottext">
+                        <span class="footleftseat">仅25席</span>
+                        <br>
+                        <span class="footleftmoney">首付100元</span>
+                    </div>
+                    <a href="https://www.wenjuan.com/s/uUjEZv/#rd" target="_blank"><button>抢座<span>&#xe603;</span></button></a>
+                </div>
+                <div class="mainfootright">
+                    <ul>
+                        <li class="num1"><img src="images/数字_03.png" alt="" width="50px">正式开课前订座 优惠100元</li>
+                        <li class="num2"><img src="images/数字_06.png" alt="" width="50px">支持按月支付课时费</li>
+                        <li class="num3"><img src="images/数字_08.png" alt="" width="50px">不满意 随时退</li>
+                    </ul>
+                </div>
+                <img class="imgemo" src="images/emo.png" alt="">
+            </div>
+        </div>
+        <div class="foot">
+            <p>
+                <a href="http://www.jirengu.com/index.php?app=classroom&mod=About&act=about"><span>关于我们</span></a>
+                <a href="http://www.jirengu.com/index.php?app=classroom&mod=About&act=join"><span>加入我们</span></a>
+                <a href="http://www.jirengu.com/index.php?app=classroom&mod=About&act=charge"><span>报名收费</span></a>
+            </p>
+            <p>
+                <span>课程内容版本均归杭州饥人谷教育科技有限公司所有</span>
+                <span>浙 ICP 备 14041127 号-1</span>
+                <span>Designed by <a href="https://github.com/Zegendary">张xw</a></span>
+            </p>
+        </div>
+    </div>
+<script type="text/javascript">
+    //$(function(){
+
+    var $ct = $('.img-ct'),
+            $items = $ct.children(),
+            $pre = $('.pre'),
+            $next = $('.next'),
+            $bullet = $('.bullet'),
+            imgWidth = $items.width(),
+            imgCount = $ct.children().size();
+
+
+
+    var curIdx = 0;
+    var isAnimate = false;
+
+    $next.on('click', function(){
+        playNext();
+    });
+    $pre.on('click', function(){
+        playPre();
+    });
+    $bullet.find('li').on('click', function(){
+        var idx = $(this).index();
+        play(idx);
+    });
+
+    play(0);
+    autoPlay();
+
+
+
+
+    function playNext(){
+        play((curIdx+1)%imgCount)
+    }
+
+    function playPre(){
+        play((imgCount+curIdx-1)%imgCount)
+    }
+    function play(idx){
+        if(isAnimate) return;
+        isAnimate = true;
+        $items.eq(curIdx).fadeOut(500);
+        $items.eq(idx).fadeIn(500, function(){
+            isAnimate = false;
+        });
+
+        curIdx = idx;
+        setBullet();
+    }
+
+    function setBullet(){
+        $bullet.children().removeClass('active')
+                .eq(curIdx).addClass('active');
+    }
+    function stopAuto(){
+        clearInterval(clock);
+    }
+
+    function autoPlay(){
+        clock = setInterval(function(){
+            playNext();
+        }, 2000);
+    }
+
+
+    //});
+
+</script>
+</body>
+</html>

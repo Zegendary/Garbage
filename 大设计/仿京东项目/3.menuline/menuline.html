@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>menu</title>
+	<link rel="stylesheet" href="menuline.css">
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1463901280_0294726.css">
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+	<div class="menulinewrapper">
+		<div class="menuline">
+			<a href="" class="allmenu">全部商品分类</a>
+			<a href="" class="other">服装城</a>
+			<a href="" class="other">美妆馆</a>
+			<a href="" class="other">超市</a>
+			<a href="" class="other">生鲜</a>
+			<a href="" class="other">全球购</a>
+			<a href="" class="other">闪购</a>
+			<a href="" class="other">团购</a>
+			<a href="" class="other">拍卖</a>
+			<a href="" class="other">金融</a>
+		</div>
+	</div>
+	<div class="menulistwrapper">
+		<ul class=menu>
+				<li data-index=0><span class="categoryName">家用电器</span></li>
+				<li data-index=1><span class="categoryName">手机、数码、京东通信</span></li>
+				<li data-index=2><span class="categoryName">电脑、办公</span></li>
+				<li data-index=3><span class="categoryName">家居、家具、家装、厨具</span></li>
+				<li data-index=4><span class="categoryName">男装、女装、童装、内衣</span></li>
+				<li data-index=5><span class="categoryName">个护化妆、清洁用品、宠物</span></li>
+				<li data-index=6><span class="categoryName">鞋靴、箱包、珠宝、奢侈品</span></li>
+				<li data-index=7><span class="categoryName">运动户外、钟表</span></li>
+				<li data-index=8><span class="categoryName">汽车、汽车用品</span></li>
+				<li data-index=9><span class="categoryName">母婴、玩具乐器</span></li>
+				<li data-index=10><span class="categoryName">食品、酒类、生鲜、特产</span></li>
+				<li data-index=11><span class="categoryName">医药保健</span></li>
+				<li data-index=12><span class="categoryName">图书、音像、电子书</span></li>
+				<li data-index=13><span class="categoryName">彩票、旅行、充值、票务</span></li>
+				<li data-index=14><span class="categoryName">理财、众筹、白条、保险</span></li>
+		</ul>
+		<ul class=submenu>
+			<li>内容1</li>
+			<li>内容2</li>
+			<li>内容3</li>
+			<li>内容4</li>
+			<li>内容5</li>
+			<li>内容6</li>
+			<li>内容7</li>
+			<li>内容8</li>
+			<li>内容9</li>
+			<li>内容10</li>
+			<li>内容11</li>
+			<li>内容12</li>
+			<li>内容13</li>
+			<li>内容14</li>
+			<li>内容15</li>
+		</ul>
+	</div>
+	<script>
+		$('.menu > li').on('mouseenter',function(e){
+			var $current = $(e.currentTarget)
+			var index = $current.attr('data-index')
+			var indexNumber = +index
+			$('.submenu').children('li.active').removeClass('active')
+			$('.submenu').children('li').eq(indexNumber).addClass('active')
+			$('.menu').children('li.active').removeClass('active')
+			$('.menu').children('li').eq(indexNumber).addClass('active')
+		})
+		$('.menulistwrapper').on('mouseleave',function(){
+			$('.submenu').children('li.active').removeClass('active');
+			$('.menu').children('li.active').removeClass('active');
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	background: #d2d5d6;
+	height: 100%;
+	font-family: 微软雅黑, sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+span{
+	cursor: pointer;
+}
+a{
+	text-decoration: none;
+}
+.wrapper{
+	width: 440px;
+	height: 500px;
+	margin: 0 auto;
+	background: #eef1f2;
+	position: relative;
+	top: 50%;
+	margin-top: -250px;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0px 6px 7px #999;
+}
+.background{
+	width: 100%;
+	height: 270px;
+	position: relative;
+	text-align: center;
+}
+.background .music-lyric{
+	width: 100%;
+	height: 230px;
+	padding: 20px 0;
+	background-color: rgba(100, 100, 100, 0.5)
+}
+.background .music-lyric .lyric-view{
+	height: 230px;
+	overflow: hidden;
+}
+.background .music-lyric ul{
+	position: relative;
+	transition: all 1s;
+}
+.lyric li{
+	padding: 5px 0 2px 0;
+	position: relative;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 12px ;
+	transition: all 1s;
+}
+.lyric li.active {
+  font-size: 13px;
+  color: #ffffff;
+}
+.content{
+	height: 100px;
+	width: 400px;
+	padding: 20px 20px 10px 20px;
+}
+.content .music-massage{
+	display: inline-block;
+	width: 280px;
+	height: 100%;	
+}
+.content .music-massage p{
+	cursor: default;
+}
+.content .musicname{
+	font-weight: bold;
+	font-size: 26px;
+	color: #455569;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow: hidden;
+}
+.content .musicer{
+	font-weight: bold;
+	font-size: 18px;
+	color: #455569;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow: hidden;
+}
+.content .record{
+	font-size: 14px;
+	color: #455569;
+	margin-top: 4px;
+}
+.content .music-icon{
+	float: right;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.content .music-icon a,.content .music-icon span{
+	margin-left: 10px;
+	font-size: 22px;
+}
+span.colored,a.colored{color: #cdd2d7;}
+span.stared{color: #feec98}
+span.loved{color: #fe8698}
+.content .music-icon span:hover{
+	text-shadow: 1px 1px 1px #ccc;
+}
+.basebar{
+	display: block;
+	border:none;
+	width: 400px;
+	height: 4px;
+	margin: 0px auto 10px auto;
+	border-radius: 2px;
+	background-color: #414141;
+	position: relative;
+}
+.basebar .progressbar{
+	display: block;
+	border:none;
+	width: 0%;
+	height: 4px;
+	border-radius: 2px;
+	background-color: #cdd2d7;
+}
+.controls{
+	width: 400px;
+	height: 50px;
+	padding: 20px 20px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.controls .play-control,.music-control{
+	display: inline-block;
+}
+.controls .play-control .btn1{
+	display: inline-block;
+	width: 38px;
+	height: 38px;
+	border-radius: 19px;
+	background: #414141;
+	color: #d9d9d9;
+	font-size: 20px;
+	text-align: center;
+	line-height: 38px;
+}
+.controls .play-control .btn2,.btn3{
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	border-radius: 14px;
+	background: #414141;
+	color: #d9d9d9;
+	font-size: 16px;
+	text-align: center;
+	line-height: 28px;
+}
+.controls .music-control{
+	float: right;
+	line-height: 38px;
+}
+.controls .music-control span{
+	margin-left: 10px;
+	font-size: 22px;
+}
+.controls .music-control span:hover{
+	text-shadow: 1px 1px 1px #ccc;
+}
+.controls .music-control span.lyriced{color: #414141}
+.controls .music-control span.recycleed{color: #414141}

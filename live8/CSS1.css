@@ -1,0 +1,56 @@
+.apple {
+	color: red;
+}
+#banana {
+	color: yellow;
+}
+p
+{
+	color: blue;
+}
+*
+{
+	color: green;
+}
+div,h4
+{
+	color: orange;
+}
+ul li
+{
+	color: purple;
+}
+/*.element {
+	width: 300px;
+	height: 300px;
+	border: 2px;border-color: black;
+}*/
+div>ul
+{
+	font-size: 20px;
+}
+li+li
+{
+	font-family: '微软雅黑';
+}
+
+a[target]
+{
+	background-color: #222;
+}
+a[target=_blank] 
+{
+	background-color: #DDDDDD;
+}
+[title~=html]
+{
+    font-size: 30px;
+}
+[class|=link]
+{
+	border: 2px solid;
+}
+p~p
+{
+	padding: 20px;
+}

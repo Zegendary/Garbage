@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>三列布局1</title>
+	<style>
+    *{
+    	padding: 0;margin: 0;
+    }
+    .father{
+    	width: 1200px;
+    	margin: 0 auto;
+    }
+    .aside{
+    	float: left;
+
+    	background-color: green;
+    	width: 150px;
+    	height: 400px;
+
+    }
+    .main{
+    	float: left;
+
+    	background-color: red;
+    	margin-left: 10px;
+    	width: 880px;
+    	min-height: 450px;
+    }
+    .ad{
+        float: left;
+
+    	background-color: green;
+    	width: 150px;
+    	height: 400px;
+    	margin-left: 10px;
+    }
+	</style>
+</head>
+<body>
+     <div class="father">
+		<div class="aside">边框</div>
+		<div class="main">主要部分</div>
+		<div class="ad">这一部分是广告</div>
+	</div>
+</body>
+</html>

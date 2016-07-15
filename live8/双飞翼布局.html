@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双飞翼布局</title>
+	<style>
+	*{margin: 0;padding: 0;word-break: break-all;}
+    .header,.footer{
+    	background-color: #ccc;
+    	text-align: center;
+    	
+    }
+    .main,.left,.right{
+    	float: left;
+    	min-height: 200px;
+    }
+    .father{
+    	width: 100%
+    }
+    .main{
+    	background-color: red;
+    	width: 100%;
+    }
+    .left{
+    	background-color: green;
+        width: 200px;
+        margin-left: -100%;
+        display: inline;
+    }
+    .right{
+    	background-color: blue;
+        width: 200px;
+        margin-left: -200px;
+    }
+    .maintext{
+    	margin: 0 210px 0 210px;
+    	min-height: 180px;
+    	background-color: yellow;
+    }
+    </style>
+</head>
+<body>
+	<div class="header">
+		<h4>header</h4>
+	</div>
+		<div class="main">
+		    <div class="maintext">
+			    <h5>main</h5>
+				<p>汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字</p>
+			</div>	
+		</div>
+		<div class="left">
+			<h5>left</h5>
+			<p>left left left left left left left left left left left left left left left</p>
+		</div>
+		<div class="right">
+			<h5>right</h5>
+			<p>rightrightrightrightrightrightrightrightrightrightrightright</p>
+		</div>
+	<div class="footer">
+		<h4>footer</h4>
+	</div>
+</body>
+</html>

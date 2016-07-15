@@ -1,0 +1,59 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-apple-nav_03 {
+    width: 105px;
+    height: 36px;
+    background-position: -5px -5px;
+}
+
+.sprite-apple-nav_05 {
+    width: 105px;
+    height: 36px;
+    background-position: -5px -51px;
+}
+
+.sprite-apple-nav_07 {
+    width: 105px;
+    height: 36px;
+    background-position: -5px -97px;
+}
+
+.sprite-apple-nav_09 {
+    width: 105px;
+    height: 36px;
+    background-position: -5px -143px;
+}
+
+.sprite-apple-nav_11 {
+    width: 105px;
+    height: 36px;
+    background-position: -120px -5px;
+}
+
+.sprite-apple-nav_13 {
+    width: 104px;
+    height: 36px;
+    background-position: -120px -51px;
+}
+
+.sprite-apple-nav_15 {
+    width: 104px;
+    height: 36px;
+    background-position: -120px -97px;
+}
+
+.sprite-apple-nav_17 {
+    width: 104px;
+    height: 36px;
+    background-position: -120px -143px;
+}
+
+.sprite-apple-nav_19 {
+    width: 135px;
+    height: 36px;
+    background-position: -5px -189px;
+}

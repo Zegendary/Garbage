@@ -1,0 +1,160 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	background: #d2d5d6;
+	height: 100%;
+	font-family:Arial, Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+span{
+	cursor: pointer;
+}
+a{
+	text-decoration: none;
+}
+.wrapper{
+	width: 220px;
+	height: 250px;
+	margin: 0 auto;
+	background: #eef1f2;
+	position: relative;
+	top: 50%;
+	margin-top: -125px;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0px 6px 7px #999;
+}
+.background{
+	width: 100%;
+	height: 80px;
+	position: relative;
+}
+.background div{
+	width: 100%;
+	height: 80px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.background .background1{
+	background: url(fade.jpg)
+}
+.background .background2{
+	background: url(smith.jpg)
+}
+.background .background3{
+	background: url(UptownFunk.jpg)
+}
+.show{display: block;}
+.hide{display: none;}
+.content{
+	height: 60px;
+	width: 180px;
+	padding: 30px 20px 10px 20px;
+}
+.content .music-massage{
+	display: inline-block;
+	width: 108px;
+	height: 100%;	
+}
+.content .musicname{
+	font-weight: bold;
+	font-size: 16px;
+	color: #455569;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow: hidden;
+}
+.content .musicer{
+	font-weight: bold;
+	font-size: 12px;
+	color: #455569;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow: hidden;
+}
+.content .record{
+	font-size: 12px;
+	color: #455569;
+	margin-top: 5px;
+}
+.content .music-icon{
+	float: right;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.content .music-icon a,.content .music-icon span{
+	margin-left: 5px;
+}
+span.colored,a.colored{color: #cdd2d7;}
+span.stared{color: #feec98}
+span.loved{color: #fe8698}
+.content .music-icon span:hover{
+	text-shadow: 1px 1px 1px #ccc;
+}
+.basebar{
+	display: block;
+	border:none;
+	width: 180px;
+	height: 4px;
+	margin: 0px auto 10px auto;
+	border-radius: 2px;
+	background-color: #414141;
+	position: relative;
+}
+.basebar .progressbar{
+	display: block;
+	border:none;
+	width: 0%;
+	height: 4px;
+	border-radius: 2px;
+	background-color: #cdd2d7;
+}
+.controls{
+	width: 180px;
+	height: 40px;
+	padding: 10px 20px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.controls .play-control,.music-control{
+	display: inline-block;
+}
+.controls .play-control .btn1{
+	display: inline-block;
+	width: 38px;
+	height: 38px;
+	border-radius: 19px;
+	background: #414141;
+	color: #d9d9d9;
+	font-size: 20px;
+	text-align: center;
+	line-height: 38px;
+}
+.controls .play-control .btn2,.btn3{
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	border-radius: 14px;
+	background: #414141;
+	color: #d9d9d9;
+	font-size: 16px;
+	text-align: center;
+	line-height: 28px;
+}
+.controls .music-control{
+	float: right;
+	line-height: 38px;
+}
+.controls .music-control span{
+	margin-left: 5px;
+}
+.controls .music-control span:hover{
+	text-shadow: 1px 1px 1px #ccc;
+}

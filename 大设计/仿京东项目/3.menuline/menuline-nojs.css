@@ -1,0 +1,110 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	font: 12px/150% Arial,Verdana,"\5b8b\4f53";
+	-webkit-font-smoothing: antialiased;
+}
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+body{min-height: 1000px}
+i{font-style: normal;}
+.jd-arrow{display: inline-block;}
+
+/*横向商品目录*/
+.menulinewrapper{
+	width: 100%;
+	height: 44px;
+	border-bottom: 2px solid #b1191a;
+}
+.menulinewrapper .menuline{
+	width: 1210px;
+	margin: 0 auto;
+}
+.menulinewrapper .menuline .other{
+	height: 44px;
+    padding: 0 20px;
+    text-align: center;
+    text-decoration: none;
+    font: 400 15px/44px "microsoft yahei";
+    color: #333;
+}
+.menulinewrapper .menuline .other:hover{
+	color: #c81623;
+}
+.menulinewrapper .menuline .allmenu{
+	font: 400 15px/44px "microsoft yahei";
+	width: 190px;
+	height: 44px;
+	line-height: 44px;
+	padding: 0 10px;
+	text-align: left;
+	background: #b1191a;
+	display: inline-block;
+	color: #fff;
+}
+/*分类列表样式*/
+.menulistwrapper{
+	width: 1210px;
+	margin: 0 auto;
+	position: relative;
+}
+.menulistwrapper .menu{
+	display: inline-block;
+	border-bottom: 1px solid #b61d1d;
+}
+.menulistwrapper .menu li{
+	display:block;
+	border-left: 1px solid #b61d1d;
+    height: 31px;
+    color: #fff;
+    background: #b61d1d;
+    width: 209px;
+}
+.menulistwrapper .menu p{
+	position: relative;}
+.menulistwrapper .menu p:after{
+	content: '\e604';
+	font-family: 'jd-icon';
+	position: absolute;
+	right: 5px;
+	top: 7px;
+	color: #fff;
+}
+.menulistwrapper .menu li:hover{
+	width: 210px;
+	background: #fff;
+	color: #b61d1d;
+}
+.menulistwrapper .menu li:hover p{
+	background: #f7f7f7;
+	width: 210px;
+	z-index: 10;
+}
+.menulistwrapper .menu li span{
+	font-family: "Microsoft YaHei",tahoma,arial,"Hiragino Sans GB","\5b8b\4f53",sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 31px;
+	margin: 0 10px;
+	cursor: pointer;
+}
+.menulistwrapper .sunmenu{
+	position: absolute;
+	width: 1000px;
+	height: 500px;
+	top: 0px;
+	left: 210px;
+	background: #f7f7f7;
+	color: black;
+	border: 1px solid #b61d1d;
+	border-top: none;
+	display: none;
+}
+.menulistwrapper .menu li:hover .sunmenu{
+	display: block;
+}

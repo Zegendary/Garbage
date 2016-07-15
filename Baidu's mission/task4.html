@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task4</title>
+	<style>
+	body{align-items: center;}
+	.content{
+		top: 50%;
+		left: 50%;
+		height: 200px;
+		width: 400px;
+		position: absolute;
+	}
+	.wrapper{
+		height: 200px;
+		width: 400px;
+		background: #ccc;
+		position: absolute;
+		bottom: 50%;
+		right: 50%;
+	}
+	.circle1{
+		border:50px solid;
+		width: 0;
+		position: relative;
+		top:-50px;
+		left: -50px;
+		border-color: transparent #fc0 transparent transparent;
+		border-radius: 50px;
+		transform: rotate(45deg);
+	}
+	.circle2{
+		border:50px solid #fc0;
+		width: 0;
+		position: relative;
+		top: 50px;
+		left: 350px;
+		border-color: transparent transparent transparent #fc0;
+		border-radius: 50px;
+		transform: rotate(45deg);
+	}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<div class="wrapper">
+		<div class="circle1"></div>
+		<div class="circle2"></div>
+	</div>
+	</div>
+	
+</body>
+</html>
