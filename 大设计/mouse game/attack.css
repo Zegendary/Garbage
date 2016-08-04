@@ -1,0 +1,25 @@
+body,div{ 
+	padding:0;
+	margin:0;
+}
+.div1{
+	width: 400px;
+	height: 400px;
+	background: gray;
+	margin: 0 auto;
+	position: relative;
+	}
+.div1 button{
+	height: 40px;
+	width: 40px;
+	background: url("mouse.png");
+	background-size: cover;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	display: inline-block;
+	position: absolute;
+}
+p{
+	text-align: center;
+}

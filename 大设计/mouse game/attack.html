@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="attack.css">
+	<title>attack</title>
+</head>
+<body>
+	 <p style="height: 30px;font-size: 20px;color: #EEEEEE;background: #445566;">欢迎来到打地鼠小游戏,让我们一起打啊打!</p>
+	 <div id="bgDiv" class="div1">
+
+	 </div>
+	 <p>分数为:<span id="number"></span></p>
+	 <div style="width: 200px;height: 50px;background:black;text-align: center;margin: 0 auto ;">
+	 	<input style="height: 50px;color: #ffffff;font-size: 16px;background: red;" type="button" value="开始游戏"onclick="start()">
+	 	<input style="height: 50px;color: #ffffff;font-size: 16px;background: green;" type="button" value="结束游戏" onclick="stop()">
+	 </div>
+	 <script>
+	 	var hitNumber=0;
+	 	var timer=null;
+	 	var flag=null
+	 	function start(){
+	 		var box = document.getElementById("bgDiv")
+	 		box.removeChild(box.firstChild)
+	 		var text1 = document.getElementById("number")
+	 		text1.innerHTML = 0
+	 		if(timer == null){
+	 			timer = setInterval(function create(){//创建地鼠
+	 				flag = true
+	 				var newButton = document.createElement('button')
+	 				var box = document.getElementById('bgDiv')
+	 				box.appendChild(newButton)
+	 				newButton.setAttribute('onclick','hit()')
+	 				newButton.setAttribute('id','mouse')
+	 				newButton.style.left = randomX()
+	 				newButton.style.top = randomY()
+	 				setTimeout(function (){
+	 					box.removeChild(newButton)
+	 				},1000)
+	 			},2000)
+	 		}
+	 	}
+	 	function stop(){ //停止打地鼠
+	 		clearInterval(timer)
+	 		var tip=document.createElement("div")
+	 		tip.style.height="100px"
+	 		tip.style.width="200px"
+	 		tip.style.background="red"
+	 		var box = document.getElementById("bgDiv")
+	 		box.appendChild(tip)
+	 		tip.style.margin = "0 auto"
+	 		tip.style.color="white"
+	 		tip.style.fontSize="20px"
+	 		tip.style.textAlign="center"
+	 		tip.style.lineHeight="100px"
+	 		tip.innerHTML="恭喜你获得"+hitNumber+"分"
+	 		timer = null
+	 		hitNumber = 0
+	 	}
+	 	function randomX(){
+	 		var leftLength = Math.floor(Math.random()*360)+"px"
+	 		return leftLength
+	 	}
+	 	function randomY(){
+	 		var topLength = Math.floor(Math.random()*360)+"px"
+	 		return topLength
+	 	}
+	 	function hit(){ //当点击地鼠的时候，次数累加
+	 		if (flag) {
+	 			flag = false
+	 			hitNumber++
+	 			var text1 = document.getElementById("number")
+	 			text1.innerHTML = hitNumber
+	 			var box = document.getElementById('bgDiv')
+		 		var newButton =  document.getElementById('mouse')
+		 		newButton.style.display = "none"
+	 		}
+	 		
+	 	}
+	 </script>
+</body>
+</html>
